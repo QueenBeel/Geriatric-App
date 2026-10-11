@@ -192,12 +192,88 @@ Build one working flow at a time. Start with Welcome → Profile Setup → Home,
 
 ## Running the project
 
-There is no runnable scaffold yet. After project initialization, replace this section with verified prerequisites, dependency installation, Android emulator/device setup, development commands, test commands, and release-build commands from the actual repository. Do not treat this README as installation instructions for an existing app.
+Follow the steps below to set up and launch the app locally on your PC or test it on an Android phone.
+
+### Prerequisites
+
+- **[Node.js](https://nodejs.org/)** (v18 or newer recommended)
+- **npm** (comes bundled with Node.js)
+- For testing on a physical Android phone: **[Expo Go](https://play.google.com/store/apps/details?id=host.exp.exponent)** installed from Google Play Store
+
+---
+
+### 1. Clone & Install Dependencies
+
+Open your terminal or command prompt in the project root directory and run:
+
+```bash
+git clone https://github.com/QueenBeel/Geriatric-App.git
+cd Geriatric-App
+npm install
+```
+
+---
+
+### 2. Launch on PC (Web Browser)
+
+To run the application directly in your computer's web browser:
+
+```bash
+npm run web
+```
+
+Alternatively, run:
+
+```bash
+npx expo start
+```
+and press **`w`** in the terminal to open the web version in your default browser (at `http://localhost:8081` or `http://localhost:8082`).
+
+---
+
+### 3. Launch on an Android Phone
+
+#### Option A: Physical Android Device (Recommended & Fastest)
+
+1. **Install Expo Go**: Download and install the **Expo Go** app from the Google Play Store on your Android device.
+2. **Connect to the same Wi-Fi**: Ensure your Android phone and PC are connected to the same Wi-Fi network.
+3. **Start the Metro Bundler**: In your PC terminal, run:
+   ```bash
+   npx expo start
+   ```
+4. **Scan QR Code**:
+   - Open the **Expo Go** app on your Android phone.
+   - Tap **"Scan QR code"** and point your camera at the QR code displayed in your PC terminal.
+   - The JavaScript bundle will download and the app will open directly on your phone!
+
+> **Troubleshooting Connection Issues:** If your phone and PC cannot connect over Wi-Fi (e.g. on corporate or university networks), start Expo with tunnel mode:
+> ```bash
+> npx expo start --tunnel
+> ```
+
+#### Option B: Android Emulator (on PC via Android Studio)
+
+1. Ensure **Android Studio** is installed and an Android Virtual Device (AVD) is set up and running.
+2. Start the dev server:
+   ```bash
+   npm run android
+   ```
+   *(Or run `npx expo start` and press **`a`** in the terminal).*
+
+---
+
+### Useful Keyboard Shortcuts (in the terminal)
+
+- **`r`** — Reload the application
+- **`m`** — Toggle developer menu
+- **`a`** — Open in Android emulator / connected USB device
+- **`w`** — Open in web browser
+- **`c`** — Display developer tools QR code
 
 ## Publication preparation
 
 Before publication, verify the then-current Android and Google Play requirements against official documentation. Prepare the app identity, icon, screenshots, privacy policy, accurate data disclosures, signed release build, and required testing/review materials. Keep signing secrets outside source control.
 
-**Design link:** To be added after the Figma prototype is created.
+**Design link:** [Figma Design Prototype](https://www.figma.com/design/XfrZXAsCjrmirG16eyNGBc/Untitled?node-id=0-1&t=Kvumfc2eUK80ZSB6-1)
 
 **License:** To be decided before distributing source code.
