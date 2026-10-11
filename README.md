@@ -262,6 +262,21 @@ and press **`w`** in the terminal to open the web version in your default browse
 
 ---
 
+### Windows Troubleshooting: PowerShell Script Execution Error
+
+If you are on Windows (using PowerShell) and see:
+> `npx : File ...\npx.ps1 cannot be loaded because running scripts is disabled on this system.`
+
+Run this command once in PowerShell to allow script execution for your user account:
+
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+
+Or simply run `npm start` instead of `npx expo start`, or switch from PowerShell to **Command Prompt (CMD)** or **Git Bash**.
+
+---
+
 ### Useful Keyboard Shortcuts (in the terminal)
 
 - **`r`** — Reload the application
